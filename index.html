@@ -127,7 +127,8 @@
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: 33%;
-        /* flex-basis: 33%;
+
+        /* flex-bas: 33%;
         flex-grow: 1; */
       }
 
@@ -144,6 +145,11 @@
       }
 
       .grid-container {
+        border: 8px solid black;
+        display: grid;
+        gap: 1em;
+        /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         /* display: grid; */
         /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
       }
