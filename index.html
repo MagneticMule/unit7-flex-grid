@@ -9,12 +9,18 @@
 
   <body>
     <header>
-      <h1 class="title"><span>SUPER DUPER</span> GRIDDY FLEX THINGY!!!</h1>
+      <h1 class="title"><span>SUPER DUPER</span> GRIDDY FLEXY THINGY!!!</h1>
     </header>
     <main>
       <section class="flex">
-        <h1>FlexBox</h1>
-        <div class="flex-container">
+        <h1>FlexBox Columns</h1>
+        <div class="flex-columns">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+        <h1>FlexBox Griddy</h1>
+        <div class="flex-griddy">
           <div class="item">1</div>
           <div class="item">2</div>
           <div class="item">3</div>
@@ -25,6 +31,20 @@
           <div class="item">8</div>
           <div class="item">9</div>
           <div class="item">10</div>
+        </div>
+      </section>
+      <section>
+        <h1>Flexy Full Layout</h1>
+        <div class="flexy-full-layout">
+          <div class="item">Header</div>
+          <div class="item navigation">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+          </div>
+          <div class="item">Main</div>
+          <div class="item">Aside</div>
+          <div class="item">Footer</div>
         </div>
       </section>
       <section class="grid">
@@ -47,22 +67,85 @@
       <p>Unit 7: Responsive Design</p>
     </footer>
     <style>
-      .flex-container {
+      .navigation {
+        font-size: 3rem;
         display: flex;
-        flex-wrap: wrap;
+        gap: 1em;
+        flex-direction: row;
+      }
+      .flex-columns {
+        display: flex;
+        flex-direction: row;
         gap: 1em;
       }
 
+      .flex-columns > * {
+        flex-basis: 100%;
+      }
+
+      .flex-container {
+        /* display: flex;
+        flex-wrap: wrap;
+        gap: 1em; */
+      }
+
       .flex-container > * {
+        /* flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 200px; */
+        /* flex-basis: 25%;
+        flex-shrink: 1;
+        flex-grow: 1;
+        word-break: break-all; */
+      }
+
+      .flex-griddy {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        /* display: flex;
+        flex-wrap: wrap; */
+      }
+
+      .flex-griddy > * {
+        /* flex-shrink: 1;
+        flex-grow: 1;
+        flex-basis: 25%; */
+        flex: 1;
+        /* flex: 1 1 200px; */
+      }
+
+      .flexy-full-layout {
+        border: 8px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        /* display: flex;
+        flex-wrap: wrap; */
+      }
+
+      .flexy-full-layout > * {
         flex-grow: 1;
         flex-shrink: 1;
-        flex-basis: 200px;
+        flex-basis: 33%;
+        /* flex-basis: 33%;
+        flex-grow: 1; */
+      }
+
+      .flexy-full-layout > :nth-child(1) {
+        background-color: red;
+        flex-basis: 100%;
+        /* background-color: red;
+        flex-basis: 100%; */
+      }
+
+      .flexy-full-layout > :nth-child(5) {
+        background-color: blue;
+        flex-basis: 100%;
       }
 
       .grid-container {
-        display: grid;
+        /* display: grid; */
         /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-
       }
     </style>
   </body>
